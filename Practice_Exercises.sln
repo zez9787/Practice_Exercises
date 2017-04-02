@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "ReverseString\ReverseString.csproj", "{45765DCF-7AE0-4CCE-ABAA-46C18B686D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pig_Latin", "Pig_Latin\Pig_Latin.csproj", "{C49C5BDD-4AB0-4CC0-B45F-CEAFA68A5226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountVowels", "CountVowels\CountVowels.csproj", "{F0318FA8-7900-4353-846F-C13E3C226194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount", "WordCount\WordCount.csproj", "{054648CC-E635-4A74-9EC2-7EAE31657599}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeCheck", "PalindromeCheck\PalindromeCheck.csproj", "{00202E28-A88E-4705-9074-93854E8381F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZEditor", "ZEditor\ZEditor.csproj", "{3599DE03-5D26-4E2F-A457-7953EBE5BAD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45765DCF-7AE0-4CCE-ABAA-46C18B686D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45765DCF-7AE0-4CCE-ABAA-46C18B686D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45765DCF-7AE0-4CCE-ABAA-46C18B686D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45765DCF-7AE0-4CCE-ABAA-46C18B686D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C49C5BDD-4AB0-4CC0-B45F-CEAFA68A5226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C49C5BDD-4AB0-4CC0-B45F-CEAFA68A5226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C49C5BDD-4AB0-4CC0-B45F-CEAFA68A5226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C49C5BDD-4AB0-4CC0-B45F-CEAFA68A5226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0318FA8-7900-4353-846F-C13E3C226194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0318FA8-7900-4353-846F-C13E3C226194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0318FA8-7900-4353-846F-C13E3C226194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0318FA8-7900-4353-846F-C13E3C226194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054648CC-E635-4A74-9EC2-7EAE31657599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054648CC-E635-4A74-9EC2-7EAE31657599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054648CC-E635-4A74-9EC2-7EAE31657599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054648CC-E635-4A74-9EC2-7EAE31657599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00202E28-A88E-4705-9074-93854E8381F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00202E28-A88E-4705-9074-93854E8381F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00202E28-A88E-4705-9074-93854E8381F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00202E28-A88E-4705-9074-93854E8381F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3599DE03-5D26-4E2F-A457-7953EBE5BAD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3599DE03-5D26-4E2F-A457-7953EBE5BAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3599DE03-5D26-4E2F-A457-7953EBE5BAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3599DE03-5D26-4E2F-A457-7953EBE5BAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
