@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ZEditor
@@ -35,7 +28,13 @@ namespace ZEditor
             }
             else
             {
-                SaveFileDialog SD = new SaveFileDialog();
+                using (SaveFileDialog SD = new SaveFileDialog())
+                {
+                    if (!SD.CheckFileExists)
+                    {
+                        File.WriteAllText(SD.FileName, txtMainEdit.Text);
+                    }
+                }             
             }
         }
 
@@ -53,16 +52,30 @@ namespace ZEditor
                     return;
             }
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog OD = new OpenFileDialog()
             {
-                if (openFileDialog1.CheckFileExists)
+                InitialDirectory = "c:\\",
+                Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*",
+                FilterIndex = 2,
+                RestoreDirectory = true
+            };
+
+            if(OD.ShowDialog() == DialogResult.OK)
+            {
+                try
                 {
-                    StreamReader sr = new StreamReader(openFileDialog1.FileName);
-                    txtMainEdit.Text = sr.ReadToEnd();
-                    currentFileName = openFileDialog1.FileName;
+                    using (StreamReader sr = new StreamReader(OD.FileName))
+                    {
+                        txtMainEdit.Text = sr.ReadToEnd();
+                        currentFileName = OD.FileName;
+                        isDirty = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-            isDirty = false;
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,6 +99,8 @@ namespace ZEditor
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseForm();
+
+            this.Close();
         }
 
         private void CloseForm()
@@ -101,7 +116,6 @@ namespace ZEditor
                 else if (result == DialogResult.Cancel)
                     return;
             }
-            this.Close();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -121,6 +135,11 @@ namespace ZEditor
                     currentFileName = SD.FileName;
                 }
             }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveCurrentFile();
         }
     }
 }
