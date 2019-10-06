@@ -23,7 +23,7 @@ namespace PalindromeCheck
             string tempString = textBox1.Text;
             if (!string.IsNullOrEmpty(tempString))
             {
-                label.Visible = tempString == ReverseString.Program.ReverseThisString(tempString));                
+                label1.Visible = tempString == ReverseString.Program.ReverseThisString(tempString));                
             }
         }
     }
