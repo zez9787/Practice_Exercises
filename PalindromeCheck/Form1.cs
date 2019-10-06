@@ -20,18 +20,10 @@ namespace PalindromeCheck
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            string tempString = textBox1.Text;
+            if (!string.IsNullOrEmpty(tempString))
             {
-                string tempString = textBox1.Text;
-                if(tempString == ReverseString.Program.ReverseThisString(tempString))
-                {
-                    label1.Visible = true;
-                }
-                else
-                {
-                    label1.Visible = false;
-                }
-                
+                label.Visible = tempString == ReverseString.Program.ReverseThisString(tempString));                
             }
         }
     }
